@@ -1,0 +1,26 @@
+services:
+  code-server:
+    image: ghcr.io/israelicc/images_maker/code-server:latest
+    container_name: code-server
+    restart: unless-stopped
+    user: "root"
+    environment:
+      PASSWORD: "${PASSWORD}"
+      TZ: "America/Fortaleza"
+    volumes:
+      - code_server_data:/config
+      - workspace_data:/workspace
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      TUNNEL_TOKEN: "${TUNNEL_TOKEN}"
+    depends_on:
+      - code-server
+
+volumes:
+  code_server_data:
+  workspace_data: 

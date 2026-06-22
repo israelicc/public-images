@@ -1,0 +1,12 @@
+pandas>=3.0.0
+polars>=1.39.3
+scipy>=1.13.0
+matplotlib>=3.9.0
+marimo>=0.6.0
+psycopg[binary]>=3.3.3
+sqlalchemy>=2.0.0
+motor>=3.0.0
+redis>=5.0.0
+google-genai>=1.70.0
+pydantic-ai>=1.76.0
+fastexcel>=0.12.0
