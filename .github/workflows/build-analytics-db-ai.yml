@@ -1,4 +1,4 @@
-name: Build and Push Analytic DB AI Image
+name: Build and Push Analytics DB AI Image
 
 on:
   push:
@@ -69,7 +69,7 @@ jobs:
 
       - name: Extract package versions
         run: |
-          echo "## 📊 Analytic DB AI Image Package Versions" >> $GITHUB_STEP_SUMMARY
+          echo "## 📊 Analytics DB AI Image Package Versions" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Image:** \`${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}\`" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY

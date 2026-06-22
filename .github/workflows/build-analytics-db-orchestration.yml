@@ -11,6 +11,10 @@ on:
     paths:
       - 'images/analytics-db-orchestration/**'
       - '.github/workflows/build-analytics-db-orchestration.yml'
+  workflow_run:
+    workflows: ["Build and Push Analytics DB AI Image"]
+    types: [completed]
+    branches: [main]
   release:
     types: [published]
   schedule:
@@ -22,6 +26,7 @@ env:
 
 jobs:
   build:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
