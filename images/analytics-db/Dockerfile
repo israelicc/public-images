@@ -34,3 +34,4 @@ USER 1000:1000
 
 # Default command
 CMD ["sh", "-c", "marimo edit --no-token --no-skew-protection --port $PORT --host $MARIMO_HOST"]
+
