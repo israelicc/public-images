@@ -3,7 +3,7 @@ FROM node:20 AS node_stage
 RUN npm install -g opencode-ai@latest
 
 # Stage 2: your base image
-FROM ghcr.io/israelicc/images_maker/analytics-db-orchestration:latest
+FROM ghcr.io/israelicc/public-images/analytics-db-orchestration:latest
 
 USER root
 

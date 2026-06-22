@@ -1,4 +1,4 @@
-FROM ghcr.io/israelicc/images_maker/analytics-db:latest
+FROM ghcr.io/israelicc/public-images/analytics-db:latest
 
 USER root
 

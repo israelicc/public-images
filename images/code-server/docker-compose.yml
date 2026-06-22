@@ -1,6 +1,6 @@
 services:
   code-server:
-    image: ghcr.io/israelicc/images_maker/code-server:latest
+    image: ghcr.io/israelicc/public-images/code-server:latest
     container_name: code-server
     restart: unless-stopped
     user: "root"
